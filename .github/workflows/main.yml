@@ -29,3 +29,6 @@ jobs:
 
       - name: Deploy (optional)
         run: npm run deploy
+
+      - name: Set TAURI_SIGNING_PRIVATE_KEY_PASSWORD secret
+        run: echo "TAURI_SIGNING_PRIVATE_KEY_PASSWORD=${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}" >> $GITHUB_ENV
